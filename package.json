@@ -1,0 +1,23 @@
+{
+  "name": "cartflow-js",
+  "version": "1.0.0",
+  "description": "Lightweight vanilla JS animation library for add-to-cart effects.",
+  "main": "src/cartflow.js",
+  "keywords": [
+    "cartflowjs",
+    "add-to-cart",
+    "fly-to-cart",
+    "cart-animation",
+    "ecommerce",
+    "frontend",
+    "shopping-cart",
+    "javascript-library",
+    "vanilla-js"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tranvnthuong/cartflow-js"
+  }
+}

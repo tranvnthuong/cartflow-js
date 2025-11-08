@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CartFlowJS - Live demo</title>
+    <meta
+      name="description"
+      content="CartFlowJS is a lightweight, modern JavaScript library to animate items moving to a shopping cart."
+    />
+    <meta
+      name="keywords"
+      content="cartflowjs, add-to-cart, animation, shopping-cart, javascript-library, ecommerce, cart-animation, customizable, frontend, ecommerce"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Only for docs purpose -->
+    <style>
+      .shopping-cart {
+        position: fixed;
+        top: 10px;
+        right: 40px;
+        font-size: 24px;
+      }
+      .item {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .item img {
+        width: 100%;
+        max-width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Shop</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Product Items -->
+    <div class="container">
+      <p class="text-center fs-4 fw-bolder my-4">
+        Click the "Add to Cart" button to see the animation in action.
+      </p>
+      <div class="row">
+        <!-- Product 1 -->
+        <div class="col-md-3">
+          <div class="item item p-3 text-bg-dark rounded" data-item="1">
+            <img
+              src="assets/p1.jpg"
+              class="img-thumbnail"
+              alt="Product Image"
+            />
+            <h5 class="pt-2">Product 1</h5>
+            <p>$20.00</p>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-3">
+          <div class="item item p-3 text-bg-dark rounded" data-item="2">
+            <img
+              src="assets/p2.jpg"
+              class="img-thumbnail"
+              alt="Product Image"
+            />
+            <h5 class="pt-2">Product 2</h5>
+            <p>$35.00</p>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-3">
+          <div class="item item p-3 text-bg-dark rounded" data-item="3">
+            <img
+              src="assets/p3.jpg"
+              class="img-thumbnail"
+              alt="Product Image"
+            />
+            <h5 class="pt-2">Product 3</h5>
+            <p>$50.00</p>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="col-md-3">
+          <div class="item item p-3 text-bg-dark rounded" data-item="3">
+            <img
+              src="assets/p4.jpg"
+              class="img-thumbnail"
+              alt="Product Image"
+            />
+            <h5 class="pt-2">Product 4</h5>
+            <p>$50.00</p>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Product 5 -->
+        <div class="col-md-3">
+          <div class="item item p-3 text-bg-dark rounded" data-item="4">
+            <img
+              src="assets/p5.jpg"
+              class="img-thumbnail"
+              alt="Product Image"
+            />
+            <h5 class="pt-2">Product 5</h5>
+            <p>$20.00</p>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="col-md-3">
+          <div class="item item p-3 text-bg-dark rounded" data-item="5">
+            <img
+              src="assets/p6.jpg"
+              class="img-thumbnail"
+              alt="Product Image"
+            />
+            <h5 class="pt-2">Product 6</h5>
+            <p>$35.00</p>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 7 -->
+        <div class="col-md-3">
+          <div class="item item p-3 text-bg-dark rounded" data-item="6">
+            <img
+              src="assets/p7.jpg"
+              class="img-thumbnail"
+              alt="Product Image"
+            />
+            <h5 class="pt-2">Product 7</h5>
+            <p>$50.00</p>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 8 -->
+        <div class="col-md-3">
+          <div class="item item p-3 text-bg-dark rounded" data-item="7">
+            <img
+              src="assets/p8.jpg"
+              class="img-thumbnail"
+              alt="Product Image"
+            />
+            <h5 class="pt-2">Product 8</h5>
+            <p>$50.00</p>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shopping Cart Icon -->
+    <div class="shopping-cart">
+      <span>🛒</span>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Dev only: use local -->
+    <!-- <script src="../src/cartflow.js"></script> -->
+     <!-- Use CDN library -->
+    <script src="https://cdn.jsdelivr.net/gh/tranvnthuong/cartflow-js/src/cartflow.js"></script>
+    <!-- Main javascript -->
+    <script>
+      (function () {
+        const animation = new CartFlow({
+          cartSelector: ".shopping-cart",
+          useCustomImageSize: true,
+          setWidthImage: 200,
+          setHeightImage: 200,
+          animationDuration: 1200,
+          onComplete: () => {
+            console.log("Item successfully animated to the cart!");
+          },
+          onCartEffect: (cart) => {
+            console.log("Cart shake effect completed!", cart);
+          },
+        });
+
+        document.addEventListener("click", (event) => {
+          if (event.target.classList.contains("add-to-cart")) {
+            const button = event.target;
+            const image = button
+              .closest(".item")
+              .querySelector(".img-thumbnail");
+            animation.setButtonSelector(button);
+            animation.setImageSelector(image);
+            animation.startAnimation();
+          }
+        });
+      })();
+    </script>
+    <!-- END DEMO ONLY -->
+  </body>
+</html>
