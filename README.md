@@ -23,32 +23,41 @@ and the product image anywhere else — it will still work perfectly.
 
 ## Installation
 
-### Using CDN
+### Via NPM
+```bash
+npm install cartflow-js
+```
+
+### Via CDN
 ```html
 <script src="https://cdn.jsdelivr.net/gh/tranvnthuong/cartflow-js/src/cartflow.js"></script>
 ```
+
 ### Usage Example
 ```html
+<div id="cartIcon"><i>🛒</i></div>
 <img id="product-img" src="product.jpg" alt="Product">
-<button id="add-to-cart">Add to Cart</button>
-<div id="cart-icon"></div>
+<button class="add-to-cart">Add to Cart</button>
 
 <script>
+  import CartFlow from "cartflow-js";
+
   const cartFlow = new CartFlow({
-    cartSelector: '#cart-icon',
-    imageSelector: '#product-img',
-    buttonSelector: '#add-to-cart',
+    cartSelector: '#cartIcon',
+    imageSelector: '.product-img',
+    buttonSelector: '.add-to-cart',
     setWidthImage: 200,
     setHeightImage: 200,
     onComplete: () => console.log('Animation completed!'),
     onCartEffect: (cart) => console.log('Cart effect triggered:', cart)
   });
 
-  document.querySelector('#add-to-cart').addEventListener('click', () => {
+  document.querySelector('.add-to-cart').addEventListener('click', () => {
     cartFlow.startAnimation();
   });
 </script>
 ```
+
 ---
 
 ## Options
